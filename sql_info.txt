@@ -1,0 +1,49 @@
+GateKeeper Table:
+
+create table gatekeeper(id int primary key, name varchar(40) not null, password varchar(40) not null);
+
+mysql> select * from gatekeeper;
++----------+-----------------+----------+------------------------------+
+| id       | name            | password | email                        |
++----------+-----------------+----------+------------------------------+
+|        0 | 0               | 0        | 0                            |
+| 51900121 | Mounika Deepthi | admin121 | avulamounika.deepthi@hcl.com |
+| 51900131 | Swetha          | admin131 | swetha@hcl.com               |
+| 51900172 | Bhavani         | admin172 | bhavani@hcl.com              |
++----------+-----------------+----------+------------------------------+
+
+
+
+Team Table:
+
+create table team(tid int primary key, name varchar(40) not null, email varchar(40) unique not null, password varchar(40) not null, specialization varchar(40) not null);
+
+mysql> select * from team;
++----------+----------+------------------+----------+-----------------------+
+| tid      | name     | email            | password | specialization        |
++----------+----------+------------------+----------+-----------------------+
+|        0 | 0        | 0                | 0        | 0                     |
+| 51900201 | Vivek    | vivek@hcl.com    | team201  | Desktop               |
+| 51900202 | Manju    | manju@hcl.com    | team202  | Database Issues       |
+| 51900203 | Lakshmi  | lakshmi@hcl.com  | team203  | Software Installation |
+| 51900204 | Srinithi | srinithi@hcl.com | team204  | Server Issues         |
+| 51900205 | Krithik  | krithik@hcl.com  | team205  | Desktop               |
++----------+----------+------------------+----------+-----------------------+
+
+
+
+User Table:
+
+create table user(userid int primary key, name varchar(40) not null, email varchar(40) unique not null, password varchar(40) not null, contact bigint, dob date, doj date);
+
+mysql> select * from user;
++----------+-----------+-------------------------+----------+------------+------------+------------+
+| userid   | name      | email                   | password | contact    | dob        | doj        |
++----------+-----------+-------------------------+----------+------------+------------+------------+
+| 51902794 | Triveni   | mandadi.triveni@hcl.com | user2794 | 9010902378 | 1999-11-09 | 2020-11-19 |
+| 51902795 | Trilok    | trilok@hcl.com          | user2795 | 8374286154 | 1998-10-22 | 2020-11-19 |
+| 51902796 | Sireesha  | sireesha@hcl.com        | user2796 | 7219564912 | 1998-11-03 | 2020-11-25 |
+| 51902797 | Madhurima | madhurima@hcl.com       | user2797 | 7618549015 | 1998-07-05 | 2020-10-22 |
+| 51902798 | Ram       | ram@hcl.com             | user2798 | 8216785432 | 1998-04-12 | 2020-12-02 |
++----------+-----------+-------------------------+----------+------------+------------+------------+
+
